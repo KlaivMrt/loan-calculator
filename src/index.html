@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Loan Calculator</title>
+
+</head>
+<body>
+    <section id="main">
+        <div class="container box-shadow">
+            <div class="card">
+                <h1>Loan Calculator</h1>
+                <form class="input">
+                    <div class="field">
+                        <span class="sign">$</span>
+                        <input class="field-unit" type="number" placeholder="Loan Amount">
+                    </div>
+    
+                    <div class="field">
+                        <span class="sign">%</span>
+                        <input class="field-unit" type="number" placeholder="Annual Interest">
+                    </div>
+                    
+                    <input type="number" placeholder="Repayment Years">
+    
+                    <button class="btn">Calculate</button>
+                </form>
+    
+                <div class="output">
+                    <!-- <h1>displayed</h1> -->
+                    <div class="output-content box-shadow">
+                        <div class="label">Monthly Payment</div>
+                        <div id="m-p" class="display"></div>
+    
+                        <div class="label">Total Payment</div>
+                        <div id="t-p" class="display"></div>
+                       
+                        <div class="label">Total Interest</div>
+                        <div id="t-i" class="display"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+</html>

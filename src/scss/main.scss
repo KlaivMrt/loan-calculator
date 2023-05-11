@@ -1,0 +1,136 @@
+@import "config";
+@import "utilities";
+
+// Core styles
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: $dark-color;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    border: 1px $grey solid;
+    height: 100%;
+    padding: 0 0.9rem;
+    
+    &:focus {
+        outline: none;
+    }
+
+    &[placeholder="Repayment Years"] {
+        border-radius: 5px;
+    }
+}
+
+.alert {
+    border: #ff0000 1px solid;
+    background: #ff8a8a;
+    color: #ff0000;
+    padding: 0.7rem 0;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+
+// Main Style
+
+#main{
+    margin: 2rem 0;
+
+    .card {
+        background: $light-color;
+        // height: 300px;
+        border-radius: 3px;
+        display: grid;
+        grid-template-rows: 0.2fr 1fr;
+        padding: 1rem 2rem;
+                        
+        .input {
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 5px;
+            border-radius: 5px;
+
+            .field {
+                display: flex;
+                justify-content: space-between;
+                height: 100%;
+                
+                .sign {
+                    display: block;
+                    height: 100%;
+                    text-align: center;
+                    padding-top: 0.5rem;
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    background: $grey;
+                    flex-grow: 1;
+                    flex-basis: 0;
+                }
+
+                &-unit {
+                    flex-grow: 3;
+                    flex-basis: 1;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
+        }
+
+        .output {
+            position: relative;
+
+            // h1 {
+            //     display: none;
+            // }
+            
+            &-content {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                padding-top: 5px;
+                row-gap: 5px;
+
+                transition: all 1s ease-in-out;
+                position: absolute;
+                padding: 0.5rem;
+                border-radius: 5px;
+                width: 100%;
+                top: -125px;
+                background: $light-color;
+                z-index: -1;
+                visibility: hidden;
+            }
+
+            .display {
+                grid-column: 2 /span 2;
+                background: #fff;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .label {
+                background: $grey;
+                padding: 5px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+
+            }
+
+            .show {
+                transform: translateY(155px);
+                visibility: visible;
+            }
+        }
+    }
+}
